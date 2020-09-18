@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.SearchActivity"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/exitsearch_toolbar"></include>
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/searchview_rounded_border"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:queryHint="Search for Policy No/ Agent Name"
+        android:iconifiedByDefault="false"
+        android:layout_below="@+id/toolbar"
+        />
+
+    <TextView
+        android:id="@+id/searchCountTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Showing XX pending case(s)"
+        android:background="#e2e2e2"
+        android:textColor="#AAAEB5"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:visibility="gone"
+        android:layout_below="@id/search">
+
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e2e2e2"
+        android:layout_below="@id/searchCountTxt"
+        />
+
+    <ImageView
+        android:id="@+id/searchImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_search"
+        android:layout_centerInParent="true">
+    </ImageView>
+    <TextView
+        android:id="@+id/searchTxt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/searchImg"
+        android:text="Enter at least the first three characters to search for Policy No./ Agent Name."
+        android:gravity="center"
+        android:textColor="#5F5E60"
+        android:textSize="20dp"
+        />
+
+</RelativeLayout>

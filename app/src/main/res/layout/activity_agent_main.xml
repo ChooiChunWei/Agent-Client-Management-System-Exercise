@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".Activity.MainActivity"
+    android:background="#FFFFFF"
+
+    >
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nav_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <View
+            android:id="@+id/horizontal_div2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/CountTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/agentSearchView" />
+
+        <TextView
+            android:id="@+id/nbNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:text="23"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_div"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/psNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="18"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/vertical_div"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nbLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Business"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_div"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_div"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nbNum"
+            app:layout_constraintVertical_bias="0.26999998" />
+
+        <TextView
+            android:id="@+id/psLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Policy Servicing"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_div"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/vertical_div"
+            app:layout_constraintTop_toBottomOf="@+id/psNum"
+            app:layout_constraintVertical_bias="0.24000001" />
+
+        <View
+            android:id="@+id/horizontal_div"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="50dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nbNum" />
+
+        <View
+            android:id="@+id/vertical_div"
+            android:layout_width="1dp"
+            android:layout_height="80dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_div"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SearchView
+            android:id="@+id/agentSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/searchview_rounded_border"
+            android:queryHint="Search by Name/ID Type/PolicyNo."
+            android:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_div" />
+
+        <TextView
+            android:id="@+id/CountTxt"
+            android:layout_width="415dp"
+            android:layout_height="match_parent"
+            android:background="#e2e2e2"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Showing 23 pending case(s)"
+            android:textColor="#AAAEB5"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_div2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/agentRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e2e2e2"
+        android:layout_below="@+id/nav_tab"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/NotFoundImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:src="@drawable/ic_search"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/NotFoundTxt"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/NotFoundImg"
+        android:text="No Results"
+        android:gravity="center"
+        android:textColor="#5F5E60"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical"
+    tools:context=".Fragments.newBusinessFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/submitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:visibility="gone"
+        >
+
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="194dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Please uplaod the following documents."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/submitCard"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:cardBackgroundColor="#EF190A"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:id="@+id/submitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#EF190A"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textColor="#FFFFFF" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/LA1Txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:text="Life Assured 1"
+                android:textColor="#d62c2c"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/LA1nameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Chong Mah Xin"
+                android:textColor="#0e2850"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.02"
+                app:layout_constraintStart_toEndOf="@+id/LA1Txt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/LA1updownImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_up"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider3"
+                tools:layout_editor_absoluteY="88dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/cardview_rounded_border"
+                    android:elevation="10dp"
+
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/bp1ShrinkCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:id="@+id/bp1TitleTxt"
+                                android:layout_width="185dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginTop="8dp"
+                                android:text="HLA Blood Profile 3 - Lipids Profile"
+                                android:textColor="#0e2850"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.borjabravo.readmoretextview.ReadMoreTextView
+                                android:id="@+id/bp1ContentTxt"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry. "
+                                android:textSize="12sp"
+                                app:colorClickableText="@android:color/holo_blue_light"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bp1TitleTxt"
+                                app:trimCollapsedText="show less"
+                                app:trimExpandedText="show more"
+                                app:trimLength="55"
+                                app:trimMode="trimModeLength" />
+
+                            <TextView
+                                android:id="@+id/bp1FileSizeTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginTop="8dp"
+                                android:text="1.2 MB"
+                                android:textSize="12sp"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bp1ContentTxt" />
+
+                            <TextView
+                                android:id="@+id/bp1DateTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="180dp"
+                                android:layout_marginLeft="180dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:text="22 Oct 2018"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bp1ContentTxt" />
+
+                            <TextView
+                                android:id="@+id/bp1PageNumTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="32dp"
+                                android:layout_marginRight="32dp"
+                                android:layout_marginBottom="16dp"
+                                android:text="12 pg."
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bp1Card"
+                                app:layout_constraintVertical_bias="1.0" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/bp1Card"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginRight="32dp"
+                                app:cardCornerRadius="64dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/bp1ImageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#2196F3"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ic_camera" />
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--<androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/cardview_rounded_border"
+                    android:elevation="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/bp1TitleTxt"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="HLA Blood Profile 3 - Lipids Profile"
+                        android:textColor="#0e2850"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.borjabravo.readmoretextview.ReadMoreTextView
+                        android:id="@+id/bp1ContentTxt"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry. "
+                        android:textSize="12sp"
+                        app:colorClickableText="@android:color/holo_blue_light"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bp1TitleTxt"
+                        app:trimCollapsedText="show less"
+                        app:trimExpandedText="show more"
+                        app:trimLength="55"
+                        app:trimMode="trimModeLength" />
+
+                    <TextView
+                        android:id="@+id/bp1FileSizeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="1.2 MB"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bp1ContentTxt" />
+
+                    <TextView
+                        android:id="@+id/bp1DateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="180dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="22 Oct 2018"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bp1ContentTxt" />
+
+                    <TextView
+                        android:id="@+id/bp1PageNumTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="12 pg."
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bp1Card"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/bp1Card"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="32dp"
+                        app:cardCornerRadius="64dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/bp1ImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#2196F3"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_camera" />
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/gh1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/cardview_rounded_border"
+                    android:elevation="10dp">
+
+                    <TextView
+                        android:id="@+id/gh1TitleTxt"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Declaration of Continued Good Health Form"
+                        android:textColor="#0e2850"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.borjabravo.readmoretextview.ReadMoreTextView
+                        android:id="@+id/gh1ContentTxt"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry. "
+                        android:textSize="12sp"
+                        app:colorClickableText="@android:color/holo_blue_light"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gh1TitleTxt"
+                        app:trimCollapsedText="show less"
+                        app:trimExpandedText="show more"
+                        app:trimLength="55"
+                        app:trimMode="trimModeLength" />
+
+                    <TextView
+                        android:id="@+id/gh1FileSizeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="1.2 MB"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gh1ContentTxt" />
+
+                    <TextView
+                        android:id="@+id/gh1DateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="22 Oct 2018"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/gh1FileSizeTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/gh1ContentTxt" />
+
+                    <TextView
+                        android:id="@+id/gh1PageNumTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="12 pg."
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gh1Card"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/gh1Card"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="32dp"
+                        app:cardCornerRadius="64dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/gh1ImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FF9800"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_upload" />
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/LA2Txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:text="Life Assured 2"
+                android:textColor="#d62c2c"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+
+            <TextView
+                android:id="@+id/LA2NameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Nicholas Tze Yong"
+                android:textColor="#0e2850"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/LA2Txt"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+
+            <ImageView
+                android:id="@+id/LA2updownImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_up"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/cardview_rounded_border"
+                    android:elevation="10dp">
+
+                    <TextView
+                        android:id="@+id/bp2TitleTxt"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="HLA Blood Profile 3 - Lipids Profile"
+                        android:textColor="#0e2850"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.borjabravo.readmoretextview.ReadMoreTextView
+                        android:id="@+id/bp2ContentTxt"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry. "
+                        android:textSize="12sp"
+                        app:colorClickableText="@android:color/holo_blue_light"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bp2TitleTxt"
+                        app:trimCollapsedText="show less"
+                        app:trimExpandedText="show more"
+                        app:trimLength="55"
+                        app:trimMode="trimModeLength" />
+
+                    <TextView
+                        android:id="@+id/bp2DateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="180dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="22 Oct 2018"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bp2ContentTxt" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/bp2Card"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="32dp"
+                        app:cardCornerRadius="64dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/bp2ImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FF0000"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_exclamation_mark" />
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/gh2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/cardview_rounded_border"
+                    android:elevation="10dp">
+
+                    <TextView
+                        android:id="@+id/gh2TitleTxt"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Declaration of Continued Good Health Form"
+                        android:textColor="#0e2850"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.borjabravo.readmoretextview.ReadMoreTextView
+                        android:id="@+id/gh2ContentTxt"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry.is simply dummy text of the printing and typesetting industry. "
+                        android:textSize="12sp"
+                        app:colorClickableText="@android:color/holo_blue_light"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gh2TitleTxt"
+                        app:trimCollapsedText="show less"
+                        app:trimExpandedText="show more"
+                        app:trimLength="55"
+                        app:trimMode="trimModeLength" />
+
+                    <TextView
+                        android:id="@+id/gh2FileSizeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="1.2 MB"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gh2ContentTxt" />
+
+                    <TextView
+                        android:id="@+id/gh2DateTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="22 Oct 2018"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/gh2FileSizeTxt"
+                        app:layout_constraintTop_toBottomOf="@+id/gh2ContentTxt" />
+
+                    <TextView
+                        android:id="@+id/gh2PageNumTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="12 pg."
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/gh2Card"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/gh2Card"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="32dp"
+                        app:cardCornerRadius="64dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/gh2ImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#4CAF50"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_check" />
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="409dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LA1nameTxt" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="409dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LA2NameTxt" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="#E6D8D8D8"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:layout_gravity="bottom"
+                app:cardCornerRadius="14dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/submitSelectedTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F0F0F0"
+                    android:gravity="center"
+                    android:text="Submit Selected"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="#757678"
+                    android:enabled="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/close_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="340dp"
+                    android:src="@drawable/ic_close"
+                    android:visibility="gone"></ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+
+    <!--<androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="150dp"
+        android:elevation="148dp"
+        android:padding="40dp"
+        >
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:text="Submit Selected"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:background="#FFFFFF"
+
+            />
+    </androidx.cardview.widget.CardView>-->
+
+</LinearLayout>

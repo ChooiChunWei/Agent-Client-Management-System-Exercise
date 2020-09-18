@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.newBusinessFragment"
+    android:background="#e2e2e2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nbSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        >
+
+        <SearchView
+            android:id="@+id/nbSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:background="@drawable/searchview_rounded_border"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search by Name/ID Type/PolicyNo."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/nbCountTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Showing 23 pending case(s)"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#AAAEB5"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/nbSearchLayout"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nbRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/list_layout"
+        android:layout_below="@+id/nbCountTxt"
+        />
+
+        <ImageView
+            android:id="@+id/nbNotFoundImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_search"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:id="@+id/nbNotFoundTxt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/nbNotFoundImg"
+            android:text="No Results"
+            android:gravity="center"
+            android:textColor="#5F5E60"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            />
+
+</RelativeLayout>
