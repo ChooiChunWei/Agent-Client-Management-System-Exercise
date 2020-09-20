@@ -1,5 +1,5 @@
 # Agent-Client Management System (Exercise)
-This is an Android Studio exercise provided by my company during my internship. The main purpose of this exercise is for me to learn creating the Graphic User Interface(GUI) of a mobile application using Kotlin.
+This is an Android Studio exercise provided by my company during my internship. The main purpose of this exercise is for me to learn creating the Graphic User Interface(GUI) of a mobile application using Kotlin. Besides, I also learnt and implement Realm Database in this system.
 <br></br>
 
 ## System Introduction
